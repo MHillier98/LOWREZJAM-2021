@@ -7,9 +7,14 @@ public class RoadGenerator : MonoBehaviour
     public GameObject[] housePrefabs;
     public GameObject road;
 
+    public List<Vector3> roadLocations;
+
     private void Start()
     {
-        RandomWalk(0, 0, 1000);
+        for (int x = 0; x < 10; x++)
+        {
+            RandomWalk(0, 0, 50);
+        }
     }
 
     private void RandomWalk(int globalX, int globalZ, int counter)
@@ -17,9 +22,16 @@ public class RoadGenerator : MonoBehaviour
         if (counter > 0)
         {
             counter--;
-            int length = 3;
+            int length = 4;
+            int randLength = Random.Range(3, 5);
+            length = randLength * 2;
 
-            Instantiate(road, new Vector3(globalX, 0, globalZ), Quaternion.identity);
+            Vector3 roadLocBase = new Vector3(globalX, 0, globalZ);
+            if (!roadLocations.Contains(roadLocBase))
+            {
+                Instantiate(road, roadLocBase, Quaternion.identity);
+                roadLocations.Add(roadLocBase);
+            }
 
             int randDirection = Random.Range(0, 4);
             switch (randDirection)
@@ -28,17 +40,26 @@ public class RoadGenerator : MonoBehaviour
                     {
                         for (int z = 0; z < length; z++)
                         {
-                            Instantiate(road, new Vector3(globalX, 0, globalZ + z), Quaternion.identity);
+                            Vector3 roadLoc = new Vector3(globalX, 0, globalZ + z);
+                            if (!roadLocations.Contains(roadLoc))
+                            {
+                                Instantiate(road, roadLoc, Quaternion.identity);
+                                roadLocations.Add(roadLoc);
+                            }
                         }
                         RandomWalk(globalX, globalZ + length, counter);
                         break;
                     }
-
                 case 1:
                     {
                         for (int z = -length; z < 0; z++)
                         {
-                            Instantiate(road, new Vector3(globalX, 0, globalZ + z), Quaternion.identity);
+                            Vector3 roadLoc = new Vector3(globalX, 0, globalZ + z);
+                            if (!roadLocations.Contains(roadLoc))
+                            {
+                                Instantiate(road, roadLoc, Quaternion.identity);
+                                roadLocations.Add(roadLoc);
+                            }
                         }
                         RandomWalk(globalX, globalZ - length, counter);
                         break;
@@ -48,7 +69,12 @@ public class RoadGenerator : MonoBehaviour
                     {
                         for (int x = 0; x < length; x++)
                         {
-                            Instantiate(road, new Vector3(globalX + x, 0, globalZ), Quaternion.identity);
+                            Vector3 roadLoc = new Vector3(globalX + x, 0, globalZ);
+                            if (!roadLocations.Contains(roadLoc))
+                            {
+                                Instantiate(road, roadLoc, Quaternion.identity);
+                                roadLocations.Add(roadLoc);
+                            }
                         }
                         RandomWalk(globalX + length, globalZ, counter);
                         break;
@@ -58,37 +84,18 @@ public class RoadGenerator : MonoBehaviour
                     {
                         for (int x = -length; x < 0; x++)
                         {
-                            Instantiate(road, new Vector3(globalX + x, 0, globalZ), Quaternion.identity);
+                            Vector3 roadLoc = new Vector3(globalX + x, 0, globalZ);
+                            if (!roadLocations.Contains(roadLoc))
+                            {
+                                Instantiate(road, roadLoc, Quaternion.identity);
+                                roadLocations.Add(roadLoc);
+                            }
                         }
                         RandomWalk(globalX - length, globalZ, counter);
                         break;
                     }
             }
 
-        }
-    }
-
-    private void GenerateRoads()
-    {
-        for (float x = -9.5f; x < 10; x++)
-        {
-            for (float z = -9.5f; z < 10; z++)
-            {
-                Instantiate(road, new Vector3(x, 0, z), Quaternion.identity);
-            }
-        }
-    }
-
-    private void GenerateHouses()
-    {
-        for (int x = -9; x < 10; x += 3)
-        {
-            for (int z = -9; z < 10; z += 3)
-            {
-                int randIx = Random.Range(0, housePrefabs.Length);
-                GameObject house = housePrefabs[randIx];
-                Instantiate(house, new Vector3(x, 0, z), Quaternion.identity);
-            }
         }
     }
 }
