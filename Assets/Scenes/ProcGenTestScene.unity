@@ -244,7 +244,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roadObject: {fileID: 4142524044798801228, guid: b9c4dfa15274acd4cb422cf43a06267c, type: 3}
-  roadLocations: []
   houseObjects:
   - {fileID: 1970351068517812490, guid: 6ab3083584f8e6945aa0557a42fc974f, type: 3}
   - {fileID: 1970351068517812490, guid: 97d994ccbd04506429ffb96f0caa58f9, type: 3}
@@ -267,7 +266,12 @@ MonoBehaviour:
   - {fileID: 2444334752182512477, guid: ce9a407ebb66d0040948d8661a938458, type: 3}
   - {fileID: 2444334752182512477, guid: a1fa17d3431d27141b9cd16230330a7b, type: 3}
   - {fileID: 2444334752182512477, guid: bd550f25bd6110d47bd8d9247ecc3107, type: 3}
+  treeObjects:
+  - {fileID: 1970351068517812490, guid: 6a26eb37263fcd146929dc672e2ef283, type: 3}
+  - {fileID: 1970351068517812490, guid: f0d121bb5c589744bbab8446978b01bb, type: 3}
+  roadLocations: []
   houseLocations: []
+  treeLocations: []
 --- !u!1001 &225461587
 PrefabInstance:
   m_ObjectHideFlags: 0

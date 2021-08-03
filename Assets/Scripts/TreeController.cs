@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HouseController : MonoBehaviour
+public class TreeController : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
@@ -12,7 +12,7 @@ public class HouseController : MonoBehaviour
         }
         else if (other.transform.CompareTag("Tree"))
         {
-            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
 }

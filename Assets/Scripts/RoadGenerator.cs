@@ -5,17 +5,21 @@ using UnityEngine;
 public class RoadGenerator : MonoBehaviour
 {
     public GameObject roadObject;
-    public List<Vector3> roadLocations;
-
     public GameObject[] houseObjects;
+    public GameObject[] treeObjects;
+
+    public List<Vector3> roadLocations;
     public List<Vector3> houseLocations;
+    public List<Vector3> treeLocations;
 
     private void Start()
     {
         for (int x = 0; x < 4; x++)
         {
-            RandomWalk(0, 0, 250);
+            RandomWalk(0, 0, 200);
         }
+
+        SpawnTrees();
     }
 
     private void RandomWalk(float globalX, float globalZ, int counter)
@@ -121,5 +125,30 @@ public class RoadGenerator : MonoBehaviour
             }
         }
         return true;
+    }
+
+    private void SpawnTrees()
+    {
+        float size = 110f;
+
+        for (float x = -size; x <= size; x += 0.5f)
+        {
+            for (float z = -size; z <= size; z += 0.5f)
+            {
+                float newNoise = Random.Range(0.0f, 10000f);
+                float noise = Mathf.PerlinNoise(x + newNoise, z + newNoise);
+
+                if (noise >= 0.8f)
+                {
+                    int randTree = Random.Range(0, treeObjects.Length);
+                    GameObject tree = treeObjects[randTree];
+
+                    float randomRotation = Random.Range(0, 360);
+                    Vector3 treeLoc = new Vector3(x, 0.0f, z);
+                    Instantiate(tree, treeLoc, Quaternion.Euler(0, randomRotation, 0));
+                    treeLocations.Add(treeLoc);
+                }
+            }
+        }
     }
 }
