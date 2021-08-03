@@ -191,6 +191,10 @@ PrefabInstance:
       value: tile_high
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d9ab18cc6eeea0246be0127dcc0bd67e, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d9ab18cc6eeea0246be0127dcc0bd67e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -239,8 +243,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed135596559c81140923b5715782d20b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roadObject: {fileID: 919132149155446097, guid: 7b1f153062908584d9377d6880a16a3d, type: 3}
+  roadObject: {fileID: 4142524044798801228, guid: b9c4dfa15274acd4cb422cf43a06267c, type: 3}
   roadLocations: []
+  houseObjects:
+  - {fileID: 1970351068517812490, guid: 6ab3083584f8e6945aa0557a42fc974f, type: 3}
+  - {fileID: 1202683579405054159, guid: 401aa669e2f8f1b48999175f1e9f7928, type: 3}
+  - {fileID: 2444334752182512477, guid: b40e815ba4cdb3f429e12cd11fdbdc7b, type: 3}
+  - {fileID: 2444334752182512477, guid: a3430ca917b4e334f81f30b7e4b7314f, type: 3}
+  - {fileID: 2444334752182512477, guid: bd550f25bd6110d47bd8d9247ecc3107, type: 3}
+  houseLocations: []
 --- !u!1001 &225461587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -248,6 +259,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3918055049076352592, guid: 6405d0e67c3ba0943b8d86e599be0398, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6402015113745281265, guid: 6405d0e67c3ba0943b8d86e599be0398, type: 3}
       propertyPath: m_Name
       value: 3D Player Camera With Render Texture

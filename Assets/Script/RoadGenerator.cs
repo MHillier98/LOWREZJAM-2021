@@ -5,8 +5,10 @@ using UnityEngine;
 public class RoadGenerator : MonoBehaviour
 {
     public GameObject roadObject;
-
     public List<Vector3> roadLocations;
+
+    public GameObject[] houseObjects;
+    public List<Vector3> houseLocations;
 
     private void Start()
     {
@@ -16,7 +18,7 @@ public class RoadGenerator : MonoBehaviour
         }
     }
 
-    private void RandomWalk(int globalX, int globalZ, int counter)
+    private void RandomWalk(float globalX, float globalZ, int counter)
     {
         if (counter > 0)
         {
@@ -51,6 +53,9 @@ public class RoadGenerator : MonoBehaviour
                             {
                                 Instantiate(roadObject, roadLoc, Quaternion.identity);
                                 roadLocations.Add(roadLoc);
+
+                                SpawnHouse(globalX + 1.5f, globalZ + z);
+                                SpawnHouse(globalX - 1.5f, globalZ + z);
                             }
                         }
                         RandomWalk(globalX, globalZ + length, counter);
@@ -65,6 +70,9 @@ public class RoadGenerator : MonoBehaviour
                             {
                                 Instantiate(roadObject, roadLoc, Quaternion.identity);
                                 roadLocations.Add(roadLoc);
+
+                                SpawnHouse(globalX + 1.5f, globalZ + z);
+                                SpawnHouse(globalX - 1.5f, globalZ + z);
                             }
                         }
                         RandomWalk(globalX, globalZ - length, counter);
@@ -80,6 +88,9 @@ public class RoadGenerator : MonoBehaviour
                             {
                                 Instantiate(roadObject, roadLoc, Quaternion.identity);
                                 roadLocations.Add(roadLoc);
+
+                                SpawnHouse(globalX + x, globalZ + 1.5f);
+                                SpawnHouse(globalX + x, globalZ - 1.5f);
                             }
                         }
                         RandomWalk(globalX + length, globalZ, counter);
@@ -95,6 +106,9 @@ public class RoadGenerator : MonoBehaviour
                             {
                                 Instantiate(roadObject, roadLoc, Quaternion.identity);
                                 roadLocations.Add(roadLoc);
+
+                                SpawnHouse(globalX + x, globalZ + 1.5f);
+                                SpawnHouse(globalX + x, globalZ - 1.5f);
                             }
                         }
                         RandomWalk(globalX - length, globalZ, counter);
@@ -103,5 +117,13 @@ public class RoadGenerator : MonoBehaviour
             }
 
         }
+    }
+
+    private void SpawnHouse(float globalX, float globalZ)
+    {
+        int randHouse = Random.Range(0, houseObjects.Length);
+        GameObject house = houseObjects[randHouse];
+        Vector3 houseLoc = new Vector3(globalX, 0, globalZ);
+        Instantiate(house, houseLoc, Quaternion.identity);
     }
 }
