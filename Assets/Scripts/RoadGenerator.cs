@@ -18,8 +18,6 @@ public class RoadGenerator : MonoBehaviour
         {
             RandomWalk(0, 0, 200);
         }
-
-        SpawnTrees();
     }
 
     private void RandomWalk(float globalX, float globalZ, int counter)
@@ -111,6 +109,7 @@ public class RoadGenerator : MonoBehaviour
                 GameObject house = houseObjects[randHouse];
                 Instantiate(house, houseLoc, Quaternion.Euler(0, rotation, 0));
                 houseLocations.Add(houseLoc);
+                SpawnTrees(globalX, globalZ);
             }
         }
     }
@@ -127,18 +126,18 @@ public class RoadGenerator : MonoBehaviour
         return true;
     }
 
-    private void SpawnTrees()
+    private void SpawnTrees(float globalX, float globalZ)
     {
-        float size = 110f;
+        float sizeOffset = 8f;
 
-        for (float x = -size; x <= size; x += 0.5f)
+        for (float x = globalX - sizeOffset; x <= globalX + sizeOffset; x += 0.5f)
         {
-            for (float z = -size; z <= size; z += 0.5f)
+            for (float z = globalZ - sizeOffset; z <= globalZ + sizeOffset; z += 0.5f)
             {
                 float newNoise = Random.Range(0.0f, 10000f);
                 float noise = Mathf.PerlinNoise(x + newNoise, z + newNoise);
 
-                if (noise >= 0.8f)
+                if (noise >= 0.9f)
                 {
                     int randTree = Random.Range(0, treeObjects.Length);
                     GameObject tree = treeObjects[randTree];
