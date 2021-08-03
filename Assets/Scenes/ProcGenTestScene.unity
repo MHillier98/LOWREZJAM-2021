@@ -136,11 +136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9ab18cc6eeea0246be0127dcc0bd67e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9ab18cc6eeea0246be0127dcc0bd67e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9ab18cc6eeea0246be0127dcc0bd67e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -239,8 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed135596559c81140923b5715782d20b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  housePrefabs: []
-  road: {fileID: 919132149155446097, guid: 7b1f153062908584d9377d6880a16a3d, type: 3}
+  roadObject: {fileID: 919132149155446097, guid: 7b1f153062908584d9377d6880a16a3d, type: 3}
+  roadLocations: []
 --- !u!1001 &225461587
 PrefabInstance:
   m_ObjectHideFlags: 0
