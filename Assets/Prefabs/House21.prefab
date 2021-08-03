@@ -130,7 +130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2a2639a9a2c011b4ab0f96661f4a562d, type: 3}
       propertyPath: m_Name
-      value: fence_large (1)
+      value: fence_large
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 2a2639a9a2c011b4ab0f96661f4a562d, type: 3}
       propertyPath: m_Enabled
@@ -160,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 909fc3c88ff630347a4eb5f942113237, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2
+      value: 0.229
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 909fc3c88ff630347a4eb5f942113237, type: 3}
       propertyPath: m_LocalPosition.y
@@ -200,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 909fc3c88ff630347a4eb5f942113237, type: 3}
       propertyPath: m_Name
-      value: path_long (15)
+      value: path_long
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 909fc3c88ff630347a4eb5f942113237, type: 3}
       propertyPath: m_Enabled
