@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RoadGenerator : MonoBehaviour
 {
+    public float waitTime = 0.1f;
+
     public GameObject roadObject;
     public GameObject[] houseObjects;
     public GameObject[] treeObjects;
@@ -16,11 +18,11 @@ public class RoadGenerator : MonoBehaviour
     {
         for (int x = 0; x < 4; x++)
         {
-            RandomWalk(0, 0, 200);
+            StartCoroutine(RandomWalk(0, 0, 20));
         }
     }
 
-    private void RandomWalk(float globalX, float globalZ, int counter)
+    IEnumerator RandomWalk(float globalX, float globalZ, int counter)
     {
         if (counter > 0)
         {
@@ -44,18 +46,22 @@ public class RoadGenerator : MonoBehaviour
                     {
                         for (int z = 0; z < length; z++)
                         {
-                            SpawnRoad(globalX, globalZ + z);
+                            StartCoroutine(SpawnRoad(globalX, globalZ + z));
                         }
-                        RandomWalk(globalX, globalZ + length, counter);
+
+                        yield return new WaitForSeconds(waitTime);
+                        StartCoroutine(RandomWalk(globalX, globalZ + length, counter));
                         break;
                     }
                 case 1:
                     {
-                        for (int z = -length; z < 0; z++)
+                        for (int z = -length; z <= 0; z++)
                         {
-                            SpawnRoad(globalX, globalZ + z);
+                            StartCoroutine(SpawnRoad(globalX, globalZ + z));
                         }
-                        RandomWalk(globalX, globalZ - length, counter);
+
+                        yield return new WaitForSeconds(waitTime);
+                        StartCoroutine(RandomWalk(globalX, globalZ - length, counter));
                         break;
                     }
 
@@ -63,27 +69,30 @@ public class RoadGenerator : MonoBehaviour
                     {
                         for (int x = 0; x < length; x++)
                         {
-                            SpawnRoad(globalX + x, globalZ);
+                            StartCoroutine(SpawnRoad(globalX + x, globalZ));
                         }
-                        RandomWalk(globalX + length, globalZ, counter);
+
+                        yield return new WaitForSeconds(waitTime);
+                        StartCoroutine(RandomWalk(globalX + length, globalZ, counter));
                         break;
                     }
 
                 case 3:
                     {
-                        for (int x = -length; x < 0; x++)
+                        for (int x = -length; x <= 0; x++)
                         {
-                            SpawnRoad(globalX + x, globalZ);
+                            StartCoroutine(SpawnRoad(globalX + x, globalZ));
                         }
-                        RandomWalk(globalX - length, globalZ, counter);
+
+                        yield return new WaitForSeconds(waitTime);
+                        StartCoroutine(RandomWalk(globalX - length, globalZ, counter));
                         break;
                     }
             }
-
         }
     }
 
-    private void SpawnRoad(float globalX, float globalZ)
+    IEnumerator SpawnRoad(float globalX, float globalZ)
     {
         Vector3 roadLoc = new Vector3(globalX, 0, globalZ);
         if (!roadLocations.Contains(roadLoc))
@@ -91,14 +100,16 @@ public class RoadGenerator : MonoBehaviour
             Instantiate(roadObject, roadLoc, Quaternion.identity);
             roadLocations.Add(roadLoc);
 
-            SpawnHouse(globalX, globalZ + 1.5f, 0f);
-            SpawnHouse(globalX, globalZ - 1.5f, 180f);
-            SpawnHouse(globalX + 1.5f, globalZ, 90f);
-            SpawnHouse(globalX - 1.5f, globalZ, 270f);
+            yield return new WaitForSeconds(waitTime);
+
+            StartCoroutine(SpawnHouse(globalX, globalZ + 1.5f, 0f));
+            StartCoroutine(SpawnHouse(globalX, globalZ - 1.5f, 180f));
+            StartCoroutine(SpawnHouse(globalX + 1.5f, globalZ, 90f));
+            StartCoroutine(SpawnHouse(globalX - 1.5f, globalZ, 270f));
         }
     }
 
-    private void SpawnHouse(float globalX, float globalZ, float rotation)
+    IEnumerator SpawnHouse(float globalX, float globalZ, float rotation)
     {
         Vector3 houseLoc = new Vector3(globalX, 0, globalZ);
         if (!houseLocations.Contains(houseLoc))
@@ -109,7 +120,9 @@ public class RoadGenerator : MonoBehaviour
                 GameObject house = houseObjects[randHouse];
                 Instantiate(house, houseLoc, Quaternion.Euler(0, rotation, 0));
                 houseLocations.Add(houseLoc);
-                SpawnTrees(globalX, globalZ);
+
+                yield return new WaitForSeconds(waitTime);
+                StartCoroutine(SpawnTrees(globalX, globalZ));
             }
         }
     }
@@ -126,7 +139,7 @@ public class RoadGenerator : MonoBehaviour
         return true;
     }
 
-    private void SpawnTrees(float globalX, float globalZ)
+    IEnumerator SpawnTrees(float globalX, float globalZ)
     {
         float sizeOffset = 8f;
 
@@ -146,6 +159,8 @@ public class RoadGenerator : MonoBehaviour
                     Vector3 treeLoc = new Vector3(x, 0.0f, z);
                     Instantiate(tree, treeLoc, Quaternion.Euler(0, randomRotation, 0));
                     treeLocations.Add(treeLoc);
+
+                    yield return new WaitForSeconds(waitTime);
                 }
             }
         }

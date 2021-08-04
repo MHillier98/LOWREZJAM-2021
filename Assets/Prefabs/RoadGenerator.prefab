@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &975448280625956090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 975448280625956091}
+  - component: {fileID: 975448280625956088}
+  m_Layer: 0
+  m_Name: RoadGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &975448280625956091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975448280625956090}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &975448280625956088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975448280625956090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed135596559c81140923b5715782d20b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 0.1
+  roadObject: {fileID: 4142524044798801228, guid: b9c4dfa15274acd4cb422cf43a06267c, type: 3}
+  houseObjects:
+  - {fileID: 1970351068517812490, guid: 6ab3083584f8e6945aa0557a42fc974f, type: 3}
+  - {fileID: 1970351068517812490, guid: 97d994ccbd04506429ffb96f0caa58f9, type: 3}
+  - {fileID: 1970351068517812490, guid: f7d535439c287604d8b2bed0a7041462, type: 3}
+  - {fileID: 1970351068517812490, guid: a00c4ba925de3704491f7f548fbaff68, type: 3}
+  - {fileID: 1202683579405054159, guid: 401aa669e2f8f1b48999175f1e9f7928, type: 3}
+  - {fileID: 1202683579405054159, guid: f587540f90301d54ab721b897badc45b, type: 3}
+  - {fileID: 1202683579405054159, guid: 2f97674c26616ce46b0ab2749555b065, type: 3}
+  - {fileID: 1202683579405054159, guid: d9a14ddf0ec07aa42af4adca9d5fff32, type: 3}
+  - {fileID: 1202683579405054159, guid: 991fb002ff8541b428b9a04a2b132762, type: 3}
+  - {fileID: 1202683579405054159, guid: e420efde21b78fb4db08b6899c570bf4, type: 3}
+  - {fileID: 1202683579405054159, guid: d9d26ebd737dc9445bd52b98b416106d, type: 3}
+  - {fileID: 1202683579405054159, guid: 64d3785d0262d5c48948bb1b666369b6, type: 3}
+  - {fileID: 1202683579405054159, guid: a4313dba064343f479f4579332b4b610, type: 3}
+  - {fileID: 1202683579405054159, guid: 546036812fd6ace4b9ccfb244809e3f2, type: 3}
+  - {fileID: 2444334752182512477, guid: b40e815ba4cdb3f429e12cd11fdbdc7b, type: 3}
+  - {fileID: 2444334752182512477, guid: a3430ca917b4e334f81f30b7e4b7314f, type: 3}
+  - {fileID: 2444334752182512477, guid: bca1cb810e5e1774f868c227334dead9, type: 3}
+  - {fileID: 2444334752182512477, guid: 6ac53ff6f8706b24583d4b9b88cc4b70, type: 3}
+  - {fileID: 2444334752182512477, guid: ce9a407ebb66d0040948d8661a938458, type: 3}
+  - {fileID: 2444334752182512477, guid: a1fa17d3431d27141b9cd16230330a7b, type: 3}
+  - {fileID: 2444334752182512477, guid: bd550f25bd6110d47bd8d9247ecc3107, type: 3}
+  treeObjects:
+  - {fileID: 1970351068517812490, guid: 6a26eb37263fcd146929dc672e2ef283, type: 3}
+  - {fileID: 1970351068517812490, guid: f0d121bb5c589744bbab8446978b01bb, type: 3}
+  roadLocations: []
+  houseLocations: []
+  treeLocations: []
