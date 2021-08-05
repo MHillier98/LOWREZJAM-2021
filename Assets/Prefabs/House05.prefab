@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5132466933664943445}
   m_Layer: 0
   m_Name: House05
-  m_TagString: Untagged
+  m_TagString: House
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,9 +131,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: house_type05
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce808f317829e774c848ca6f576d6ee1, type: 3}
+      propertyPath: m_TagString
+      value: House
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: ce808f317829e774c848ca6f576d6ee1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce808f317829e774c848ca6f576d6ee1, type: 3}
@@ -201,9 +205,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: path_long
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 909fc3c88ff630347a4eb5f942113237, type: 3}
+      propertyPath: m_TagString
+      value: House
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 909fc3c88ff630347a4eb5f942113237, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 909fc3c88ff630347a4eb5f942113237, type: 3}

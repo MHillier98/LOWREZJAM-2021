@@ -20,7 +20,6 @@ public class RoadController : MonoBehaviour
 
     private void Start()
     {
-        //ShowAll();
         CheckEdges(true);
     }
 
@@ -229,16 +228,6 @@ public class RoadController : MonoBehaviour
             road0.transform.rotation = Quaternion.Euler(0, 0f, 0);
             road0.SetActive(true);
         }
-    }
-
-    private void ShowAll()
-    {
-        road0.SetActive(true);
-        endRoad1.SetActive(true);
-        straightRoad2.SetActive(true);
-        cornerRoad2.SetActive(true);
-        teeRoad3.SetActive(true);
-        allRoad4.SetActive(true);
     }
 
     private void HideAll()
