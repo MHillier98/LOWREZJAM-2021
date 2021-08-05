@@ -851,6 +851,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 975448280625956088, guid: bfa88bbc125972744909f55d0d514839, type: 3}
+      propertyPath: waitTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 975448280625956090, guid: bfa88bbc125972744909f55d0d514839, type: 3}
       propertyPath: m_Name
       value: RoadGenerator

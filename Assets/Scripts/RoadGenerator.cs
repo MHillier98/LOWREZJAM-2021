@@ -18,7 +18,7 @@ public class RoadGenerator : MonoBehaviour
     {
         for (int x = 0; x < 4; x++)
         {
-            StartCoroutine(RandomWalk(0, 0, 20));
+            StartCoroutine(RandomWalk(0, 0, 50));
         }
     }
 
