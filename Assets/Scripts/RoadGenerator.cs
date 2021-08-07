@@ -141,7 +141,7 @@ public class RoadGenerator : MonoBehaviour
 
     IEnumerator SpawnTrees(float globalX, float globalZ)
     {
-        float sizeOffset = 8f;
+        float sizeOffset = 4f;
 
         for (float x = globalX - sizeOffset; x <= globalX + sizeOffset; x += 0.5f)
         {
@@ -150,7 +150,7 @@ public class RoadGenerator : MonoBehaviour
                 float newNoise = Random.Range(0.0f, 10000f);
                 float noise = Mathf.PerlinNoise(x + newNoise, z + newNoise);
 
-                if (noise >= 0.9f)
+                if (noise >= 0.85f)
                 {
                     int randTree = Random.Range(0, treeObjects.Length);
                     GameObject tree = treeObjects[randTree];

@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed135596559c81140923b5715782d20b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.1
+  waitTime: 0.2
   roadObject: {fileID: 4142524044798801228, guid: b9c4dfa15274acd4cb422cf43a06267c, type: 3}
   houseObjects:
   - {fileID: 1970351068517812490, guid: 6ab3083584f8e6945aa0557a42fc974f, type: 3}

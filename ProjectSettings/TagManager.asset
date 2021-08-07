@@ -8,17 +8,18 @@ TagManager:
   - House
   - Grass
   - Tree
+  - PoliceCar
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
   - Road
   - RenderTexture
-  - 
+  - Police
   - 
   - 
   - 
