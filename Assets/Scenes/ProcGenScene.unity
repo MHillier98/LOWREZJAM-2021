@@ -358,6 +358,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 242288887, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0812206
+      objectReference: {fileID: 0}
+    - target: {fileID: 242288887, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1530303762736828407, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1530303762736828407, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332138869667305512, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.439
+      objectReference: {fileID: 0}
     - target: {fileID: 7261596499600888364, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
       propertyPath: m_Name
       value: PlayerCar
