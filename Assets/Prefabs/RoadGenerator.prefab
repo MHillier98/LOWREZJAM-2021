@@ -44,6 +44,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0.2
+  roadSpawnCount: 3
+  maxRoadLength: 20
+  policeSpawnCount: 3
+  policeDestinationCount: 6
+  navMeshSurface: {fileID: 0}
+  policeCarObjects: {fileID: 1954350622323227795, guid: e0e78350c80a55845ac6c56875b7261a, type: 3}
   roadObject: {fileID: 4142524044798801228, guid: b9c4dfa15274acd4cb422cf43a06267c, type: 3}
   houseObjects:
   - {fileID: 1970351068517812490, guid: 6ab3083584f8e6945aa0557a42fc974f, type: 3}
@@ -73,3 +79,4 @@ MonoBehaviour:
   roadLocations: []
   houseLocations: []
   treeLocations: []
+  policeCars: []

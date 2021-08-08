@@ -11,10 +11,8 @@ public class RoadController : MonoBehaviour
     public GameObject teeRoad3;
     public GameObject allRoad4;
 
-    [SerializeField]
-    private int connections = 0;
-    [SerializeField]
-    private bool roadUp, roadDown, roadLeft, roadRight;
+    [SerializeField] private int connections = 0;
+    [SerializeField] private bool roadUp, roadDown, roadLeft, roadRight;
 
     public bool canCheckEdges = true;
 

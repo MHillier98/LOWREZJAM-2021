@@ -1,24 +1,45 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+using UnityEngine.AI;
+using Unity.AI.Navigation;
 
 public class RoadGenerator : MonoBehaviour
 {
-    public float waitTime = 0.1f;
+    // How long to wait between instantiating anything new
+    [Header("General")]
+    public float waitTime = 0.2f;
+    public int roadSpawnCount = 4;
+    public int maxRoadLength = 50;
+    public int policeSpawnCount = 2;
+    public int policeDestinationCount = 6;
 
+    public NavMeshSurface navMeshSurface;
+
+    // Prefabs to instantiate
+    [Header("Prefabs")]
+    public GameObject policeCarObjects;
     public GameObject roadObject;
     public GameObject[] houseObjects;
     public GameObject[] treeObjects;
 
+    // Lists of where prefabs have been instantiated
+    [Header("Instantiated locations")]
     public List<Vector3> roadLocations;
     public List<Vector3> houseLocations;
     public List<Vector3> treeLocations;
 
+    // The police cars driving around
+    [Header("Instantiated police cars")]
+    public List<GameObject> policeCars;
+
     private void Start()
     {
-        for (int x = 0; x < 4; x++)
+        for (int i = 0; i <= roadSpawnCount; i++)
         {
-            StartCoroutine(RandomWalk(0, 0, 50));
+            StartCoroutine(RandomWalk(0, 0, maxRoadLength));
         }
     }
 
@@ -90,6 +111,15 @@ public class RoadGenerator : MonoBehaviour
                     }
             }
         }
+        else
+        {
+            for (int i = 0; i <= policeSpawnCount; i++)
+            {
+                StartCoroutine(SpawnPolice());
+            }
+
+            //navMeshSurface.BuildNavMesh();
+        }
     }
 
     IEnumerator SpawnRoad(float globalX, float globalZ)
@@ -157,12 +187,33 @@ public class RoadGenerator : MonoBehaviour
 
                     float randomRotation = Random.Range(0, 360);
                     Vector3 treeLoc = new Vector3(x, 0.0f, z);
+
                     Instantiate(tree, treeLoc, Quaternion.Euler(0, randomRotation, 0));
                     treeLocations.Add(treeLoc);
 
                     yield return new WaitForSeconds(waitTime);
                 }
             }
+        }
+    }
+
+    IEnumerator SpawnPolice()
+    {
+        int randSpawnIx = Random.Range(1, roadLocations.Count - 1);
+        Vector3 policeCarLoc = roadLocations[randSpawnIx];
+
+        GameObject policeCar = Instantiate(policeCarObjects, policeCarLoc, Quaternion.identity);
+        policeCars.Add(policeCar);
+
+        yield return new WaitForSeconds(waitTime);
+
+        for (int j = 0; j <= policeDestinationCount; j++)
+        {
+            int randDestinationIx = Random.Range(1, roadLocations.Count - 1);
+            Vector3 destination = roadLocations[randDestinationIx];
+
+            PoliceCarController policeCarController = policeCar.GetComponent<PoliceCarController>();
+            policeCarController.AddDestinations(destination);
         }
     }
 }
