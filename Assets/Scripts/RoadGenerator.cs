@@ -9,10 +9,11 @@ using Unity.AI.Navigation;
 public class RoadGenerator : MonoBehaviour
 {
     // How long to wait between instantiating anything new
-    [Header("General")]
+    [Header("General Params")]
     public float waitTime = 0.2f;
     public int roadSpawnCount = 4;
     public int maxRoadLength = 50;
+
     public int policeSpawnCount = 2;
     public int policeDestinationCount = 6;
 
@@ -118,7 +119,7 @@ public class RoadGenerator : MonoBehaviour
                 StartCoroutine(SpawnPolice());
             }
 
-            //navMeshSurface.BuildNavMesh();
+            //navMeshSurface.BuildNavMesh(); // big pause while getting baked
         }
     }
 
@@ -197,7 +198,7 @@ public class RoadGenerator : MonoBehaviour
         }
     }
 
-    IEnumerator SpawnPolice()
+    public IEnumerator SpawnPolice()
     {
         int randSpawnIx = Random.Range(1, roadLocations.Count - 1);
         Vector3 policeCarLoc = roadLocations[randSpawnIx];

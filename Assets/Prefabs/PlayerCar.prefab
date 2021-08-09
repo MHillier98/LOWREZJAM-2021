@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 7261596499600888366}
   - component: {fileID: 1316007460}
   - component: {fileID: 1316007461}
+  - component: {fileID: 383916715945514826}
   m_Layer: 3
   m_Name: PlayerCar
   m_TagString: Player
@@ -355,6 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereRigidbody: {fileID: 7261596499559723379}
+  roadGenerator: {fileID: 0}
   forwardAcceleration: 2
   reverseAcceleration: 1
   maxSpeed: 30
@@ -369,6 +371,7 @@ MonoBehaviour:
   leftFrontWheel: {fileID: 334836284665742719}
   rightFrontWheel: {fileID: 7238866658050621505}
   maxWheelTurn: 25
+  policeDestroyed: 0
 --- !u!65 &1316007460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -380,8 +383,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.1, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0.21}
+  m_Size: {x: 0.25, y: 0.1, z: 0.05}
+  m_Center: {x: 0, y: 0, z: 0.23}
 --- !u!65 &1316007461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -393,8 +396,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.1, z: 0.1}
-  m_Center: {x: 0, y: 0, z: -0.21}
+  m_Size: {x: 0.25, y: 0.1, z: 0.05}
+  m_Center: {x: 0, y: 0, z: -0.23}
+--- !u!65 &383916715945514826
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7261596499600888364}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3, z: 0.52}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &7261596498821442433
 PrefabInstance:
   m_ObjectHideFlags: 0

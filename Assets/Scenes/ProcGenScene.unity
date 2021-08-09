@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 3cfbe439590bfdd4b95e3717a1fcc899, type: 2}
+--- !u!114 &371500645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 975448280625956088, guid: bfa88bbc125972744909f55d0d514839, type: 3}
+  m_PrefabInstance: {fileID: 975448280704026906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed135596559c81140923b5715782d20b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &468513318 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8902804199950135187, guid: fb12bd39401cf284b86e3952049176c0, type: 3}
@@ -358,30 +369,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 242288887, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.0812206
-      objectReference: {fileID: 0}
-    - target: {fileID: 242288887, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1e-15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1530303762736828407, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1530303762736828407, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1e-15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4332138869667305512, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.439
-      objectReference: {fileID: 0}
     - target: {fileID: 7261596499600888364, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
       propertyPath: m_Name
       value: PlayerCar
       objectReference: {fileID: 0}
+    - target: {fileID: 7261596499600888366, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
+      propertyPath: roadGenerator
+      value: 
+      objectReference: {fileID: 371500645}
     - target: {fileID: 7261596499600888367, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
       propertyPath: m_RootOrder
       value: 4

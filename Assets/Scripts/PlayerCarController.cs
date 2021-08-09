@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCarController : MonoBehaviour
 {
     public Rigidbody sphereRigidbody;
+    public RoadGenerator roadGenerator;
 
     public float forwardAcceleration = 8f;
     public float reverseAcceleration = 4f;
@@ -25,6 +26,8 @@ public class PlayerCarController : MonoBehaviour
     public Transform leftFrontWheel;
     public Transform rightFrontWheel;
     public float maxWheelTurn = 25f;
+
+    public int policeDestroyed = 0;
 
     private void Start()
     {
@@ -82,6 +85,22 @@ public class PlayerCarController : MonoBehaviour
         {
             sphereRigidbody.drag = 0.1f;
             sphereRigidbody.AddForce(Vector3.up * -gravityForce * 100f);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PoliceCar"))
+        {
+            Destroy(other.gameObject);
+            policeDestroyed++;
+
+            MessageBoxController.SayMessage(policeDestroyed.ToString());
+
+            if (roadGenerator != null)
+            {
+                StartCoroutine(roadGenerator.SpawnPolice());
+            }
         }
     }
 }
