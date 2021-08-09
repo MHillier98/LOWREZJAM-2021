@@ -10,9 +10,23 @@ public class PoliceCarController : MonoBehaviour
     public List<Vector3> destinations;
     [SerializeField] private int destinationIx = 0;
 
+    public float lightFlickerSpeed = 0.1f;
+    public List<Light> lights;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+
+        //UpdateLights(true);
+        InvokeRepeating("ToggleLights", 0f, lightFlickerSpeed);
+    }
+
+    private void ToggleLights()
+    {
+        foreach (Light light in lights)
+        {
+            light.enabled = !light.enabled;
+        }
     }
 
     private void Update()
