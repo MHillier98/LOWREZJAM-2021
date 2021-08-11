@@ -389,10 +389,10 @@ MonoBehaviour:
   roadGenerator: {fileID: 0}
   forwardAcceleration: 2
   reverseAcceleration: 1
-  maxSpeed: 30
-  turnStrength: 220
+  maxSpeed: 36
+  turnStrength: 200
   gravityForce: 14
-  dragOnGround: 3
+  dragOnGround: 4
   whatIsGround:
     serializedVersion: 2
     m_Bits: 128

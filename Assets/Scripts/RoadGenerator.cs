@@ -212,8 +212,15 @@ public class RoadGenerator : MonoBehaviour
             int randDestinationIx = Random.Range(1, roadLocations.Count - 1);
             Vector3 destination = roadLocations[randDestinationIx];
 
-            PoliceCarController policeCarController = policeCar.GetComponent<PoliceCarController>();
-            policeCarController.AddDestinations(destination);
+            if (policeCar != null)
+            {
+                PoliceCarController policeCarController = policeCar.GetComponent<PoliceCarController>();
+
+                if (policeCarController != null)
+                {
+                    policeCarController.AddDestinations(destination);
+                }
+            }
         }
     }
 }
