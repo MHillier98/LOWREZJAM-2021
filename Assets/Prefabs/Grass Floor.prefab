@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6082613291006101950}
   - component: {fileID: 8902804199950135186}
   - component: {fileID: 8902804199950135187}
+  - component: {fileID: 930002947355432508}
   m_Layer: 7
   m_Name: Grass Floor
   m_TagString: Grass
@@ -142,3 +143,18 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: a81b542e056aba347a714033cf5d4d77, type: 2}
   m_BuildHeightMesh: 0
+--- !u!114 &930002947355432508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596373958909821671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e829c87dc2a2ed2419c5f67848317fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 11400000, guid: a086f686223eed942816c70be67841b0, type: 2}
+  exportAllChildren: 0
+  terrainSimplificationLevel: 0
