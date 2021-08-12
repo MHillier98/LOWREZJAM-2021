@@ -12376,10 +12376,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4332138869353965353, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7261596499600888364, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
       propertyPath: m_Name
       value: PlayerCar

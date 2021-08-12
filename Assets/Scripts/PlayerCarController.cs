@@ -6,6 +6,7 @@ public class PlayerCarController : MonoBehaviour
 {
     public Rigidbody sphereRigidbody;
     public RoadGenerator roadGenerator;
+    public GameObject smokeObject;
 
     public float forwardAcceleration = 8f;
     public float reverseAcceleration = 4f;
@@ -48,6 +49,15 @@ public class PlayerCarController : MonoBehaviour
         else if (verticalInput < 0)
         {
             speedInput = verticalInput * reverseAcceleration * 1000f;
+        }
+
+        if (verticalInput != 0 || horizontalInput != 0)
+        {
+            smokeObject.SetActive(true);
+        }
+        else
+        {
+            smokeObject.SetActive(false);
         }
 
         turnInput = horizontalInput;
