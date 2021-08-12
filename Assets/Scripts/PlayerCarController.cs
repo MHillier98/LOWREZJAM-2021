@@ -7,6 +7,7 @@ public class PlayerCarController : MonoBehaviour
     public Rigidbody sphereRigidbody;
     public RoadGenerator roadGenerator;
     public GameObject smokeObject;
+    public AudioSource audioSource;
 
     public float forwardAcceleration = 8f;
     public float reverseAcceleration = 4f;
@@ -33,6 +34,7 @@ public class PlayerCarController : MonoBehaviour
     private void Start()
     {
         sphereRigidbody.transform.parent = null;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -54,10 +56,15 @@ public class PlayerCarController : MonoBehaviour
         if (verticalInput != 0 || horizontalInput != 0)
         {
             smokeObject.SetActive(true);
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
         }
         else
         {
             smokeObject.SetActive(false);
+            audioSource.Stop();
         }
 
         turnInput = horizontalInput;
