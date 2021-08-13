@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 258956073547295940}
   m_Layer: 0
   m_Name: BackUpLeg.R
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 6904638588748610278}
   m_Layer: 0
   m_Name: Back_end
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 4846509745802680017}
   m_Layer: 0
   m_Name: Llama
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 2109061182917195887}
   m_Layer: 0
   m_Name: Torso_end
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 1622833060879799155}
   m_Layer: 0
   m_Name: Armature
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 3111242096214306935}
   m_Layer: 0
   m_Name: FrontLeg.L
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 6881493760431611717}
   m_Layer: 0
   m_Name: FrontLowLeg.L
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 5265625835732309112}
   m_Layer: 0
   m_Name: BackFoot.R_end
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 5637654585055593135}
   m_Layer: 0
   m_Name: FrontFoot.R_end
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 747873812971087244}
   m_Layer: 0
   m_Name: BackLeg.L
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 2170640881055100068}
   m_Layer: 0
   m_Name: FrontLowLeg.R_end
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 8894375901498089042}
   m_Layer: 0
   m_Name: BackLowLeg.R
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 124128387674369052}
   m_Layer: 0
   m_Name: FrontLowLeg.R
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 3202223290141644158}
   m_Layer: 0
   m_Name: BackLowLeg.L_end
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 7869594196894934358}
   m_Layer: 0
   m_Name: Torso
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 1138242091323678434}
   m_Layer: 0
   m_Name: FrontFoot.L
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 8980271422314093358}
   m_Layer: 0
   m_Name: Neck
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -611,7 +611,7 @@ GameObject:
   - component: {fileID: 9069440669101914733}
   m_Layer: 0
   m_Name: Shoulders
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 2433378711827668576}
   m_Layer: 0
   m_Name: FrontFoot.L_end
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -672,7 +672,7 @@ GameObject:
   - component: {fileID: 2899257257129277388}
   m_Layer: 0
   m_Name: FrontUpLeg.R
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 3670134624207371415}
   m_Layer: 0
   m_Name: BackFoot.R
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 4507101840182239622}
   m_Layer: 0
   m_Name: BackFoot.L
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -765,7 +765,7 @@ GameObject:
   - component: {fileID: 5951003666903906406}
   m_Layer: 0
   m_Name: FrontFoot.R
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -796,7 +796,7 @@ GameObject:
   - component: {fileID: 7748326243951956412}
   m_Layer: 0
   m_Name: BackLowLeg.R_end
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -826,7 +826,7 @@ GameObject:
   - component: {fileID: 2563703970344872124}
   m_Layer: 0
   m_Name: BackUpLeg.L
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -857,7 +857,7 @@ GameObject:
   - component: {fileID: 2177375918592867933}
   m_Layer: 0
   m_Name: FrontUpLeg.L
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 5789368285394136761}
   m_Layer: 0
   m_Name: FrontLowLeg.L_end
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -920,7 +920,7 @@ GameObject:
   - component: {fileID: 7908068323602029250}
   m_Layer: 0
   m_Name: Llama
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -981,7 +981,7 @@ GameObject:
   - component: {fileID: 1688448106629797128}
   m_Layer: 0
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1012,7 +1012,7 @@ GameObject:
   - component: {fileID: 7941400907183633094}
   m_Layer: 0
   m_Name: Head_end
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1042,7 +1042,7 @@ GameObject:
   - component: {fileID: 4899010064866723247}
   m_Layer: 0
   m_Name: BackLeg.R
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1073,7 +1073,7 @@ GameObject:
   - component: {fileID: 6642787096861116593}
   m_Layer: 0
   m_Name: root
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1108,7 +1108,7 @@ GameObject:
   - component: {fileID: 1232321234140622222}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 1525472232071765160}
   m_Layer: 0
   m_Name: Hips
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1176,7 +1176,7 @@ GameObject:
   - component: {fileID: 7829905232795844883}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1207,7 +1207,7 @@ GameObject:
   - component: {fileID: 1644326676726691432}
   m_Layer: 0
   m_Name: BackFoot.L_end
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1237,7 +1237,7 @@ GameObject:
   - component: {fileID: 7144965913200591008}
   m_Layer: 0
   m_Name: FrontLeg.R
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1268,7 +1268,7 @@ GameObject:
   - component: {fileID: 6338165326106882374}
   m_Layer: 0
   m_Name: BackLowLeg.L
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

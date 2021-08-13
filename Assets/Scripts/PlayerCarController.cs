@@ -31,6 +31,7 @@ public class PlayerCarController : MonoBehaviour
     public float maxWheelTurn = 25f;
 
     public int policeDestroyed = 0;
+    public int animalsHit = 0;
 
     private void Start()
     {
@@ -124,6 +125,14 @@ public class PlayerCarController : MonoBehaviour
             {
                 StartCoroutine(roadGenerator.SpawnPolice());
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Animal"))
+        {
+            animalsHit++;
         }
     }
 }
