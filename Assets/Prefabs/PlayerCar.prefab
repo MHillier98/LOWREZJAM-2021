@@ -392,6 +392,7 @@ MonoBehaviour:
   roadGenerator: {fileID: 0}
   smokeObject: {fileID: 7965884055339236664}
   audioSource: {fileID: 1742774135}
+  policeExplosionObject: {fileID: 1067652951131690754, guid: bbaa30a84441dee4797d63f5a58e200f, type: 3}
   forwardAcceleration: 2
   reverseAcceleration: 1
   maxSpeed: 36
@@ -456,20 +457,20 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d46d8d8173505974a8ecd900638ba5da, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3914e48c71275f44d91d0be4e822ba55, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
-  m_Pitch: 0.69
-  Loop: 1
+  m_Volume: 0.55
+  m_Pitch: 0.6
+  Loop: 0
   Mute: 0
   Spatialize: 1
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 130
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 20
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0

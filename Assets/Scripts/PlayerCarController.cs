@@ -8,6 +8,7 @@ public class PlayerCarController : MonoBehaviour
     public RoadGenerator roadGenerator;
     public GameObject smokeObject;
     public AudioSource audioSource;
+    public GameObject policeExplosionObject;
 
     public float forwardAcceleration = 8f;
     public float reverseAcceleration = 4f;
@@ -109,10 +110,15 @@ public class PlayerCarController : MonoBehaviour
     {
         if (other.CompareTag("PoliceCar"))
         {
+            float randomRotation = Random.Range(0, 360);
+            Vector3 explosionLoc = new Vector3(other.transform.position.x, 0.0f, other.transform.position.z);
+
+            Instantiate(policeExplosionObject, explosionLoc, Quaternion.Euler(0, randomRotation, 0));
+
             Destroy(other.gameObject);
             policeDestroyed++;
 
-            MessageBoxController.SayMessage(policeDestroyed.ToString());
+            //MessageBoxController.SayMessage(policeDestroyed.ToString());
 
             if (roadGenerator != null)
             {

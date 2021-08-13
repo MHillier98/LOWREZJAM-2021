@@ -12376,30 +12376,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1742774135, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1742774135, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
-      propertyPath: m_Pitch
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1742774135, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
-      propertyPath: Priority
-      value: 130
-      objectReference: {fileID: 0}
-    - target: {fileID: 1742774135, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
-      propertyPath: m_Volume
-      value: 0.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 1742774135, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 3914e48c71275f44d91d0be4e822ba55, type: 3}
-    - target: {fileID: 1742774135, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
-      propertyPath: rolloffMode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7261596499600888364, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
       propertyPath: m_Name
       value: PlayerCar
