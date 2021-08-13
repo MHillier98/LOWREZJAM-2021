@@ -237,7 +237,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &760948434
 MonoBehaviour:
@@ -12319,6 +12319,34 @@ PrefabInstance:
       propertyPath: navMeshSurface
       value: 
       objectReference: {fileID: 468513318}
+    - target: {fileID: 975448280625956088, guid: bfa88bbc125972744909f55d0d514839, type: 3}
+      propertyPath: animalObjects.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 975448280625956088, guid: bfa88bbc125972744909f55d0d514839, type: 3}
+      propertyPath: animalObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 3268540979737440049, guid: c9af538159e139a4488f447f1b72d868, type: 3}
+    - target: {fileID: 975448280625956088, guid: bfa88bbc125972744909f55d0d514839, type: 3}
+      propertyPath: animalObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 3388884734466451828, guid: 59263172fef03cf45b540e67e086aef9, type: 3}
+    - target: {fileID: 975448280625956088, guid: bfa88bbc125972744909f55d0d514839, type: 3}
+      propertyPath: animalObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 7025179928200714583, guid: 7b9fe091d2f73a346b365f11ba24385b, type: 3}
+    - target: {fileID: 975448280625956088, guid: bfa88bbc125972744909f55d0d514839, type: 3}
+      propertyPath: animalObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 5941249080663363287, guid: 33598a9740a2f724796c11c9b096511c, type: 3}
+    - target: {fileID: 975448280625956088, guid: bfa88bbc125972744909f55d0d514839, type: 3}
+      propertyPath: animalObjects.Array.data[4]
+      value: 
+      objectReference: {fileID: 3053842506081190794, guid: f5701cd103108dd48b7f04c6441d0853, type: 3}
+    - target: {fileID: 975448280625956088, guid: bfa88bbc125972744909f55d0d514839, type: 3}
+      propertyPath: animalObjects.Array.data[5]
+      value: 
+      objectReference: {fileID: 7176369791707021917, guid: 7238ad2574a8a5040bb49e5867d057be, type: 3}
     - target: {fileID: 975448280625956090, guid: bfa88bbc125972744909f55d0d514839, type: 3}
       propertyPath: m_Name
       value: RoadGenerator
@@ -12386,7 +12414,7 @@ PrefabInstance:
       objectReference: {fileID: 371500645}
     - target: {fileID: 7261596499600888367, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7261596499600888367, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12427,6 +12455,10 @@ PrefabInstance:
     - target: {fileID: 7261596499600888367, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496019869829551824, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3d0856cc381da54aa14c9afa5e7f462, type: 3}

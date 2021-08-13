@@ -24,12 +24,14 @@ public class RoadGenerator : MonoBehaviour
     public GameObject roadObject;
     public GameObject[] houseObjects;
     public GameObject[] treeObjects;
+    public GameObject[] animalObjects;
 
     // Lists of where prefabs have been instantiated
     [Header("Instantiated locations")]
     public List<Vector3> roadLocations;
     public List<Vector3> houseLocations;
     public List<Vector3> treeLocations;
+    public List<Vector3> animalLocations;
 
     // The police cars driving around
     [Header("Instantiated police cars")]
@@ -153,6 +155,7 @@ public class RoadGenerator : MonoBehaviour
 
                 yield return new WaitForSeconds(waitTime);
                 StartCoroutine(SpawnTrees(globalX, globalZ));
+                StartCoroutine(SpawnAnimals(globalX, globalZ));
             }
         }
     }
@@ -190,6 +193,34 @@ public class RoadGenerator : MonoBehaviour
 
                     Instantiate(tree, treeLoc, Quaternion.Euler(0, randomRotation, 0));
                     treeLocations.Add(treeLoc);
+
+                    yield return new WaitForSeconds(waitTime);
+                }
+            }
+        }
+    }
+
+    IEnumerator SpawnAnimals(float globalX, float globalZ)
+    {
+        float sizeOffset = 4f;
+
+        for (float x = globalX - sizeOffset; x <= globalX + sizeOffset; x += 0.5f)
+        {
+            for (float z = globalZ - sizeOffset; z <= globalZ + sizeOffset; z += 0.5f)
+            {
+                float newNoise = Random.Range(0.0f, 10000f);
+                float noise = Mathf.PerlinNoise(x + newNoise, z + newNoise);
+
+                if (noise >= 0.95f)
+                {
+                    int randAnimal = Random.Range(0, animalObjects.Length);
+                    GameObject animal = animalObjects[randAnimal];
+
+                    float randomRotation = Random.Range(0, 360);
+                    Vector3 animalLoc = new Vector3(x, 0.0f, z);
+
+                    Instantiate(animal, animalLoc, Quaternion.Euler(0, randomRotation, 0));
+                    animalLocations.Add(animalLoc);
 
                     yield return new WaitForSeconds(waitTime);
                 }
