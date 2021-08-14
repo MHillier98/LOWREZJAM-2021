@@ -11,11 +11,6 @@ public class PlayerCarController : MonoBehaviour
     public AudioSource audioSource;
     public GameObject policeExplosionObject;
 
-    public GameObject timerPanelObject;
-    public GameObject scorePanelObject;
-    public TextMeshProUGUI timerText;
-    public TextMeshProUGUI scoreText;
-
     public float forwardAcceleration = 8f;
     public float reverseAcceleration = 4f;
     public float maxSpeed = 50f;
@@ -44,13 +39,11 @@ public class PlayerCarController : MonoBehaviour
 
     private void Start()
     {
-        timerPanelObject.SetActive(true);
-        scorePanelObject.SetActive(false);
-
         sphereRigidbody.transform.parent = null;
         audioSource = GetComponent<AudioSource>();
 
         InvokeRepeating("DecreaseTimer", 0f, 1f);
+        //MessageBoxController.SayMessage(policeDestroyed.ToString());
     }
 
     private void Update()
@@ -129,16 +122,16 @@ public class PlayerCarController : MonoBehaviour
         if (timer > 0)
         {
             timer--;
-            timerText.text = timer.ToString();
+            MessageBoxController.SayMessage(timer.ToString());
         }
         else
         {
-            timerPanelObject.SetActive(false);
-            scoreText.text = (policeDestroyed * animalsHit).ToString();
-            scorePanelObject.SetActive(true);
             gameOver = true;
             audioSource.Stop();
             smokeObject.SetActive(false);
+
+            MessageBoxController.SayMessage((policeDestroyed * animalsHit).ToString());
+            Time.timeScale = 0;
         }
     }
 

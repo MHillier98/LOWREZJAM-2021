@@ -14,7 +14,7 @@ public class MessageBoxController : MonoBehaviour
 	[TextArea]
 	[HideInInspector]
 	public string message;
-	public Color fontColor;
+	public Color fontColor = new Color(255,255,255,1);
 	public GameObject waitCursor;
 	public string characterMap;
 	public List<Sprite> characterObjects = new List<Sprite>();
@@ -52,27 +52,27 @@ public class MessageBoxController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (wait)
-		{
-			waitCursor.GetComponent<Animator>().SetBool("waiting", true);
-			if (Input.GetButtonDown("Fire1"))
-			{
-				if (count >= message.Length)
-				{
-					message = "";
-					Clear();
-					Time.timeScale = 1;
-					Game.pauseTime = false;
-					lastMessage = Time.unscaledTime;
-					this.GetComponent<SpriteRenderer>().enabled = false;
-				}
-				else
-				{
-					message = message.Substring(36);
-					MessageBoxController.SayMessage(message,_speed);
-				}
-			}
-		}
+		//if (wait)
+		//{
+		//	waitCursor.GetComponent<Animator>().SetBool("waiting", true);
+		//	if (Input.GetButtonDown("Fire1"))
+		//	{
+		//		if (count >= message.Length)
+		//		{
+		//			message = "";
+		//			Clear();
+		//			Time.timeScale = 1;
+		//			Game.pauseTime = false;
+		//			lastMessage = Time.unscaledTime;
+		//			this.GetComponent<SpriteRenderer>().enabled = false;
+		//		}
+		//		else
+		//		{
+		//			message = message.Substring(36);
+		//			MessageBoxController.SayMessage(message,_speed);
+		//		}
+		//	}
+		//}
 	}
 
 	private void LateUpdate()
@@ -102,8 +102,8 @@ public class MessageBoxController : MonoBehaviour
 	void _SayMessage(string newMessage, float speed = .1f)
 	{
 		_speed = speed;
-		Game.pauseTime = true;
-		Time.timeScale = 0;
+		//Game.pauseTime = true;
+		//Time.timeScale = 0;
 		this.GetComponent<SpriteRenderer>().enabled = true;
 		message = newMessage.ToUpper();
 		string[] lines = message.Split('\n');
@@ -130,8 +130,9 @@ public class MessageBoxController : MonoBehaviour
 		wait = false;
 		for (int i = 0; i < gos.Count; i++)
 		{
-			DestroyImmediate(gos[i]);
-		}
+			//DestroyImmediate(gos[i]);
+			Destroy(gos[i]);
+        }
 		gos.Clear();
 		count = 0;
 		if (IsInvoking("NextLetter"))
@@ -209,7 +210,7 @@ public class MessageBoxController : MonoBehaviour
 				}
 				
 			}
-			yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(0f); ;// new WaitForEndOfFrame();
 		}
 	}
 
