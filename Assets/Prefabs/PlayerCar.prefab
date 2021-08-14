@@ -393,6 +393,9 @@ MonoBehaviour:
   smokeObject: {fileID: 7965884055339236664}
   audioSource: {fileID: 1742774135}
   policeExplosionObject: {fileID: 1067652951131690754, guid: bbaa30a84441dee4797d63f5a58e200f, type: 3}
+  scorePanelObject: {fileID: 0}
+  timerText: {fileID: 0}
+  scoreText: {fileID: 0}
   forwardAcceleration: 2
   reverseAcceleration: 1
   maxSpeed: 36
@@ -408,6 +411,8 @@ MonoBehaviour:
   rightFrontWheel: {fileID: 7238866658050621505}
   maxWheelTurn: 25
   policeDestroyed: 0
+  animalsHit: 0
+  timer: 61
 --- !u!65 &1316007460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5442,6 +5447,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4345377644579093604, guid: 6405d0e67c3ba0943b8d86e599be0398, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4366615971235054998, guid: 6405d0e67c3ba0943b8d86e599be0398, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -5467,6 +5476,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6402015113527487108, guid: 6405d0e67c3ba0943b8d86e599be0398, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402015113527487108, guid: 6405d0e67c3ba0943b8d86e599be0398, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.4567103
       objectReference: {fileID: 0}
@@ -5485,6 +5498,10 @@ PrefabInstance:
     - target: {fileID: 6402015113745281265, guid: 6405d0e67c3ba0943b8d86e599be0398, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402015113745281265, guid: 6405d0e67c3ba0943b8d86e599be0398, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6402015113745281265, guid: 6405d0e67c3ba0943b8d86e599be0398, type: 3}
       propertyPath: m_TagString

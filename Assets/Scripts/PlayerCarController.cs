@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerCarController : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class PlayerCarController : MonoBehaviour
     public GameObject smokeObject;
     public AudioSource audioSource;
     public GameObject policeExplosionObject;
+
+    public GameObject timerPanelObject;
+    public GameObject scorePanelObject;
+    public TextMeshProUGUI timerText;
+    public TextMeshProUGUI scoreText;
 
     public float forwardAcceleration = 8f;
     public float reverseAcceleration = 4f;
@@ -33,53 +39,64 @@ public class PlayerCarController : MonoBehaviour
     public int policeDestroyed = 0;
     public int animalsHit = 0;
 
+    public int timer = 61;
+    public bool gameOver = false;
+
     private void Start()
     {
+        timerPanelObject.SetActive(true);
+        scorePanelObject.SetActive(false);
+
         sphereRigidbody.transform.parent = null;
         audioSource = GetComponent<AudioSource>();
+
+        InvokeRepeating("DecreaseTimer", 0f, 1f);
     }
 
     private void Update()
     {
-        speedInput = 0f;
-
-        float verticalInput = Input.GetAxisRaw("Vertical");
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-
-        if (verticalInput > 0)
+        if (!gameOver)
         {
-            speedInput = verticalInput * forwardAcceleration * 1000f;
-        }
-        else if (verticalInput < 0)
-        {
-            speedInput = verticalInput * reverseAcceleration * 1000f;
-        }
+            speedInput = 0f;
 
-        if (verticalInput != 0 || horizontalInput != 0)
-        {
-            smokeObject.SetActive(true);
-            if (!audioSource.isPlaying)
+            float verticalInput = Input.GetAxisRaw("Vertical");
+            float horizontalInput = Input.GetAxisRaw("Horizontal");
+
+            if (verticalInput > 0)
             {
-                audioSource.Play();
+                speedInput = verticalInput * forwardAcceleration * 1000f;
             }
+            else if (verticalInput < 0)
+            {
+                speedInput = verticalInput * reverseAcceleration * 1000f;
+            }
+
+            if (verticalInput != 0 || horizontalInput != 0)
+            {
+                smokeObject.SetActive(true);
+                if (!audioSource.isPlaying)
+                {
+                    audioSource.Play();
+                }
+            }
+            else
+            {
+                smokeObject.SetActive(false);
+                audioSource.Stop();
+            }
+
+            turnInput = horizontalInput;
+
+            if (grounded)
+            {
+                transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * Time.deltaTime * verticalInput, 0f));
+            }
+
+            leftFrontWheel.localRotation = Quaternion.Euler(leftFrontWheel.localRotation.eulerAngles.x, (turnInput * maxWheelTurn) - 180f, leftFrontWheel.localRotation.eulerAngles.z);
+            rightFrontWheel.localRotation = Quaternion.Euler(rightFrontWheel.localRotation.eulerAngles.x, turnInput * maxWheelTurn, rightFrontWheel.localRotation.eulerAngles.z);
+
+            transform.position = sphereRigidbody.transform.position;
         }
-        else
-        {
-            smokeObject.SetActive(false);
-            audioSource.Stop();
-        }
-
-        turnInput = horizontalInput;
-
-        if (grounded)
-        {
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * Time.deltaTime * verticalInput, 0f));
-        }
-
-        leftFrontWheel.localRotation = Quaternion.Euler(leftFrontWheel.localRotation.eulerAngles.x, (turnInput * maxWheelTurn) - 180f, leftFrontWheel.localRotation.eulerAngles.z);
-        rightFrontWheel.localRotation = Quaternion.Euler(rightFrontWheel.localRotation.eulerAngles.x, turnInput * maxWheelTurn, rightFrontWheel.localRotation.eulerAngles.z);
-
-        transform.position = sphereRigidbody.transform.position;
     }
 
     private void FixedUpdate()
@@ -104,6 +121,24 @@ public class PlayerCarController : MonoBehaviour
         {
             sphereRigidbody.drag = 0.1f;
             sphereRigidbody.AddForce(Vector3.up * -gravityForce * 100f);
+        }
+    }
+
+    private void DecreaseTimer()
+    {
+        if (timer > 0)
+        {
+            timer--;
+            timerText.text = timer.ToString();
+        }
+        else
+        {
+            timerPanelObject.SetActive(false);
+            scoreText.text = (policeDestroyed * animalsHit).ToString();
+            scorePanelObject.SetActive(true);
+            gameOver = true;
+            audioSource.Stop();
+            smokeObject.SetActive(false);
         }
     }
 
