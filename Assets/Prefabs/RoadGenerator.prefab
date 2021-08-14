@@ -76,7 +76,15 @@ MonoBehaviour:
   treeObjects:
   - {fileID: 1970351068517812490, guid: 6a26eb37263fcd146929dc672e2ef283, type: 3}
   - {fileID: 1970351068517812490, guid: f0d121bb5c589744bbab8446978b01bb, type: 3}
+  animalObjects:
+  - {fileID: 3268540979737440049, guid: c9af538159e139a4488f447f1b72d868, type: 3}
+  - {fileID: 3388884734466451828, guid: 59263172fef03cf45b540e67e086aef9, type: 3}
+  - {fileID: 7025179928200714583, guid: 7b9fe091d2f73a346b365f11ba24385b, type: 3}
+  - {fileID: 5941249080663363287, guid: 33598a9740a2f724796c11c9b096511c, type: 3}
+  - {fileID: 3053842506081190794, guid: f5701cd103108dd48b7f04c6441d0853, type: 3}
+  - {fileID: 7176369791707021917, guid: 7238ad2574a8a5040bb49e5867d057be, type: 3}
   roadLocations: []
   houseLocations: []
   treeLocations: []
+  animalLocations: []
   policeCars: []
