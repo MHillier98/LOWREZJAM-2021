@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerCarController : MonoBehaviour
 {
@@ -11,12 +12,12 @@ public class PlayerCarController : MonoBehaviour
     public AudioSource audioSource;
     public GameObject policeExplosionObject;
 
-    public float forwardAcceleration = 8f;
-    public float reverseAcceleration = 4f;
-    public float maxSpeed = 50f;
-    public float turnStrength = 180f;
-    public float gravityForce = 10f;
-    public float dragOnGround = 3f;
+    public float forwardAcceleration = 2f;
+    public float reverseAcceleration = 1f;
+    public float maxSpeed = 36f;
+    public float turnStrength = 200f;
+    public float gravityForce = 14f;
+    public float dragOnGround = 4f;
 
     private float speedInput;
     private float turnInput;
@@ -90,6 +91,13 @@ public class PlayerCarController : MonoBehaviour
 
             transform.position = sphereRigidbody.transform.position;
         }
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            SceneManager.LoadScene("ProcGenScene");
+            Time.timeScale = 1f;
+
+        }
     }
 
     private void FixedUpdate()
@@ -131,7 +139,7 @@ public class PlayerCarController : MonoBehaviour
             smokeObject.SetActive(false);
 
             MessageBoxController.SayMessage((policeDestroyed * animalsHit).ToString());
-            Time.timeScale = 0;
+            Time.timeScale = 0f;
         }
     }
 

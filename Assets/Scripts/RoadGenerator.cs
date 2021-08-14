@@ -9,11 +9,11 @@ public class RoadGenerator : MonoBehaviour
 {
     // How long to wait between instantiating anything new
     [Header("General Params")]
-    public float waitTime = 0.2f;
-    public int roadSpawnCount = 4;
-    public int maxRoadLength = 50;
+    public float waitTime = 0.1f;
+    public int roadSpawnCount = 3;
+    public int maxRoadLength = 20;
 
-    public int policeSpawnCount = 2;
+    public int policeSpawnCount = 3;
     public int policeDestinationCount = 6;
 
     public NavMeshSurface navMeshSurface;
